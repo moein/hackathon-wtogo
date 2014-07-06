@@ -1,0 +1,26 @@
+{
+  "manifest_version": 2,
+  "name": "trivagoSuggestions",
+  "version": "1.0",
+  "description": "Extension to provide destination suggestions to trivago users",
+  "icons": {
+      "16": "icon.png",
+      "48": "icon.png",
+      "128": "icon.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["http://www.trivago.com/*"],
+      "js": ["lib/jquery.min.js", "config/config.js", "js/user.js", "js/suggestions.js", "js/comparison.js", "js/lifecost.js", "js/weather.js", "js/attractions.js", "contentscript.js"],
+      "css": ["css/style.css"]
+    }
+  ], 
+ "permissions": 
+    [
+        "unlimitedStorage",
+        "geolocation",
+        "http://*/",
+        "tabs"
+    ]
+}
+
